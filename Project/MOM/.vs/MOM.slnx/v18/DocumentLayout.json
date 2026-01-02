@@ -1,0 +1,263 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\6th sem Btech\\.NET\\Project\\MOM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\department\\departmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\department\\departmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\department\\departmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\department\\departmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\controllers\\meetingmembercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\controllers\\meetingmembercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\staff\\stafflist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\staff\\stafflist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\meetingmember\\meetingmemberslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\meetingmember\\meetingmemberslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\meetingtype\\meetingtypelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\meetingtype\\meetingtypelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\meeting\\meetinglist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\meeting\\meetinglist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\meetingvenue\\meetingvenuelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\meetingvenue\\meetingvenuelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\meetingmember\\meetingmembersaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\meetingmember\\meetingmembersaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\meeting\\meetingaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\meeting\\meetingaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\staff\\staffaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\staff\\staffaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|d:\\6th sem btech\\.net\\project\\mom\\mom\\views\\meetingtype\\meetingtypeaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{089DA721-8327-7DC8-9AC8-9976679EE0B3}|MOM\\MOM.csproj|solutionrelative:mom\\views\\meetingtype\\meetingtypeaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaffController.cs",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Controllers\\StaffController.cs",
+              "RelativeDocumentMoniker": "MOM\\Controllers\\StaffController.cs",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Controllers\\StaffController.cs",
+              "RelativeToolTip": "MOM\\Controllers\\StaffController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T05:17:44.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartmentAddEdit.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Department\\DepartmentAddEdit.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\Department\\DepartmentAddEdit.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Department\\DepartmentAddEdit.cshtml",
+              "RelativeToolTip": "MOM\\Views\\Department\\DepartmentAddEdit.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwCcAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T07:21:32.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MOM\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAAAEsBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T04:32:02.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentList.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Department\\DepartmentList.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\Department\\DepartmentList.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Department\\DepartmentList.cshtml",
+              "RelativeToolTip": "MOM\\Views\\Department\\DepartmentList.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAiwJkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:11:19.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MeetingMemberController.cs",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Controllers\\MeetingMemberController.cs",
+              "RelativeDocumentMoniker": "MOM\\Controllers\\MeetingMemberController.cs",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Controllers\\MeetingMemberController.cs",
+              "RelativeToolTip": "MOM\\Controllers\\MeetingMemberController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T05:22:48.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MeetingController.cs",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Controllers\\MeetingController.cs",
+              "RelativeDocumentMoniker": "MOM\\Controllers\\MeetingController.cs",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Controllers\\MeetingController.cs",
+              "RelativeToolTip": "MOM\\Controllers\\MeetingController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T05:20:56.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MeetingList.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Meeting\\MeetingList.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\Meeting\\MeetingList.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Meeting\\MeetingList.cshtml",
+              "RelativeToolTip": "MOM\\Views\\Meeting\\MeetingList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:22:09.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MeetingMembersList.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingMember\\MeetingMembersList.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\MeetingMember\\MeetingMembersList.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingMember\\MeetingMembersList.cshtml",
+              "RelativeToolTip": "MOM\\Views\\MeetingMember\\MeetingMembersList.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:23:40.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StaffList.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Staff\\StaffList.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\Staff\\StaffList.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Staff\\StaffList.cshtml",
+              "RelativeToolTip": "MOM\\Views\\Staff\\StaffList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:18:39.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MeetingTypeList.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingType\\MeetingTypeList.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\MeetingType\\MeetingTypeList.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingType\\MeetingTypeList.cshtml",
+              "RelativeToolTip": "MOM\\Views\\MeetingType\\MeetingTypeList.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T04:59:41.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MeetingVenueList.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingVenue\\MeetingVenueList.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\MeetingVenue\\MeetingVenueList.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingVenue\\MeetingVenueList.cshtml",
+              "RelativeToolTip": "MOM\\Views\\MeetingVenue\\MeetingVenueList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:15:12.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MeetingMembersAddEdit.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingMember\\MeetingMembersAddEdit.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\MeetingMember\\MeetingMembersAddEdit.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingMember\\MeetingMembersAddEdit.cshtml",
+              "RelativeToolTip": "MOM\\Views\\MeetingMember\\MeetingMembersAddEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:24:01.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MeetingAddEdit.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Meeting\\MeetingAddEdit.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\Meeting\\MeetingAddEdit.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Meeting\\MeetingAddEdit.cshtml",
+              "RelativeToolTip": "MOM\\Views\\Meeting\\MeetingAddEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:22:26.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StaffAddEdit.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Staff\\StaffAddEdit.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\Staff\\StaffAddEdit.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\Staff\\StaffAddEdit.cshtml",
+              "RelativeToolTip": "MOM\\Views\\Staff\\StaffAddEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:18:59.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MeetingTypeAddEdit.cshtml",
+              "DocumentMoniker": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingType\\MeetingTypeAddEdit.cshtml",
+              "RelativeDocumentMoniker": "MOM\\Views\\MeetingType\\MeetingTypeAddEdit.cshtml",
+              "ToolTip": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\Views\\MeetingType\\MeetingTypeAddEdit.cshtml",
+              "RelativeToolTip": "MOM\\Views\\MeetingType\\MeetingTypeAddEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T05:00:01.587Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

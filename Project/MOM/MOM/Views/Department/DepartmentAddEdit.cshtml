@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Add Department</h5>
+
+        <form>
+            <div class="row g-3">
+
+                <!-- Department Name -->
+                <div class="col-md-6">
+                    <label class="form-label">Department Name</label>
+                    <input type="text" class="form-control" placeholder="Enter department name">
+                </div>
+
+                <!-- Extension -->
+                <div class="col-md-6">
+                    <label class="form-label">Extension</label>
+                    <input type="text" class="form-control" placeholder="Enter extension">
+                </div>
+
+                <!-- City -->
+                <div class="col-md-6">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" placeholder="Enter city">
+                </div>
+
+                <!-- Start Date -->
+                <div class="col-md-6">
+                    <label class="form-label">Start Date</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <!-- Completion -->
+                <div class="col-md-6">
+                    <label class="form-label">Completion (%)</label>
+                    <input type="number" class="form-control" placeholder="e.g. 75">
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-4 text-end">
+                <button type="reset" class="btn btn-secondary btn-sm">
+                    Cancel
+                </button>
+                <button type="submit" class="btn btn-success btn-sm">
+                    <i class="bi bi-save"></i> Save Department
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
