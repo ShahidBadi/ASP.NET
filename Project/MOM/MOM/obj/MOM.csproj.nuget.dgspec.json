@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\MOM.csproj": {}
+    "D:\\6th sem Btech\\ASP.NET PROJECT\\Project\\MOM\\MOM\\MOM.csproj": {}
   },
   "projects": {
-    "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\MOM.csproj": {
+    "D:\\6th sem Btech\\ASP.NET PROJECT\\Project\\MOM\\MOM\\MOM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\MOM.csproj",
+        "projectUniqueName": "D:\\6th sem Btech\\ASP.NET PROJECT\\Project\\MOM\\MOM\\MOM.csproj",
         "projectName": "MOM",
-        "projectPath": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\MOM.csproj",
+        "projectPath": "D:\\6th sem Btech\\ASP.NET PROJECT\\Project\\MOM\\MOM\\MOM.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\6th sem Btech\\.NET\\Project\\MOM\\MOM\\obj\\",
+        "outputPath": "D:\\6th sem Btech\\ASP.NET PROJECT\\Project\\MOM\\MOM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

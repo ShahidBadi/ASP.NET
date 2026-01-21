@@ -1,5 +1,9 @@
-﻿
-<div class="pagetitle">
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@* <div class="pagetitle">
     <h1>department List</h1>
     <nav>
         <ol class="breadcrumb">
@@ -8,9 +12,9 @@
             <li class="breadcrumb-item active">Data</li>
         </ol>
     </nav>
-</div><!-- End Page Title -->
+</div><!-- End Page Title --> *@
 
-<section class="section">
+@* <section class="section">
     <div class="row">
         <div class="col-lg-12">
 
@@ -19,14 +23,14 @@
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h5 class="card-title mb-0">Department List</h5>
 
-                        <a href="add-department.html" class="btn btn-success btn-sm">
+                        <a class="btn btn-success btn-sm" asp-controller="Department" asp-action="DepartmentAddEdit">
                             <i class="bi bi-plus-circle"></i> Add Department
                         </a>
-                    </div>
-                    <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable. Check for <a href="https://fiduswriter.github.io/simple-datatables/demos/" target="_blank">more examples</a>.</p>
+                    </div> *@
+@* <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable. Check for <a href="https://fiduswriter.github.io/simple-datatables/demos/" target="_blank">more examples</a>.</p> *@
 
-                    <!-- Table with stripped rows -->
-                    <table class="table datatable">
+<!-- Table with stripped rows -->
+@*                     <table class="table datatable">
                         <thead>
                             <tr>
                                 <th>
@@ -161,4 +165,144 @@
 
         </div>
     </div>
-</section>
+</section> *@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Department List - MOM</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="~/assets/css/List.css">
+</head>
+<body>
+
+
+    <div class="page-header">
+        <h1 class="page-title">Staff</h1>
+        <div class="breadcrumb">
+            <a href="#"><i class="bi bi-house-door"></i> Home</a>
+            <span>/</span>
+            <span>Staff</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">All Staff</h5>
+            <a class="btn btn-success" asp-controller="Staff" asp-action="StaffAddEdit">
+                <i class="bi bi-plus-circle"></i>
+                Add staff
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>StaffName</th>
+                            <th>MobileNo</th>
+                            <th>Email</th>
+                            <th>Dept</th>
+                            <th>Remarks</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Unity Pugh</td>
+                            <td>9958</td>
+                            <td>Curicó</td>
+                            <td>2005/02/11</td>
+                            <td>Curicó</td>
+                            @* <td>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 37%"></div>
+                                    </div>
+                                    <span style="font-size: 13px;">37%</span>
+                                </div>
+                            </td> *@
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Theodore Duran</td>
+                            <td>8971</td>
+                            <td>Dhanbad</td>
+                            <td>1999/04/07</td>
+                            <td>Dhanbad</td>
+                            @* <td>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 97%"></div>
+                                    </div>
+                                    <span style="font-size: 13px;">97%</span>
+                                </div>
+                            </td> *@
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kylie Bishop</td>
+                            <td>3147</td>
+                            <td>Norman</td>
+                            <td>2005/09/08</td>
+                            <td>Norman</td>
+                            @* <td>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 63%"></div>
+                                    </div>
+                                    <span style="font-size: 13px;">63%</span>
+                                </div>
+                            </td> *@
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,128 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Add Department - MOM</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="~/assets/css/AddEdit.css">
+</head>
+<body>
+
+
+    <!-- Main Content -->
+    <div class="page-header">
+        <h1 class="page-title">Add New Department</h1>
+        <div class="breadcrumb">
+            <a href="#"><i class="bi bi-house-door"></i> Home</a>
+            <span>/</span>
+            <a href="#">Departments</a>
+            <span>/</span>
+            <span>Add New</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">
+                <i class="bi bi-building"></i>
+                Department Information
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="info-box">
+                <i class="bi bi-info-circle"></i>
+                <div class="info-box-content">
+                    <div class="info-box-title">Quick Tip</div>
+                    <div class="info-box-text">Fill in the department details below. All fields marked with an asterisk (*) are required.</div>
+                </div>
+            </div>
+
+            <form>
+                <!-- Department Name -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="bi bi-building"></i>
+                        Department Name
+                        <span class="required">*</span>
+                    </label>
+                    <div class="input-group">
+                        <i class="bi bi-building input-icon"></i>
+                        <input type="text" class="form-control" placeholder="e.g., Human Resources, IT Department, Marketing" required>
+                    </div>
+                    <small class="form-text">Enter a unique name for the department</small>
+                </div>
+
+                <!-- Department Code (Optional) -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="bi bi-hash"></i>
+                        Department Code
+                    </label>
+                    <div class="input-group">
+                        <i class="bi bi-hash input-icon"></i>
+                        <input type="text" class="form-control" placeholder="e.g., HR001, IT002" maxlength="10">
+                    </div>
+                    <small class="form-text">Optional short code for easy reference</small>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="bi bi-card-text"></i>
+                        Description
+                    </label>
+                    <textarea class="form-control" rows="4" placeholder="Enter department description, responsibilities, and key functions..." style="resize: vertical; min-height: 100px;"></textarea>
+                    <small class="form-text">Provide a brief description of the department's role and responsibilities</small>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <a class="btn btn-outline" asp-controller="MeetingVenue" asp-action="MeetingVenueList">
+                        <i class="bi bi-arrow-left"></i>
+                        Back to List
+                    </a>
+                    <button type="reset" class="btn btn-secondary">
+                        <i class="bi bi-arrow-clockwise"></i>
+                        Reset Form
+                    </button>
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-check-circle"></i>
+                        Save Department
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // Form validation visual feedback
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim() !== '') {
+                    this.style.borderColor = 'rgba(79, 172, 254, 0.5)';
+                }
+            });
+        });
+
+        // Auto-resize textarea
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+            });
+        });
+    </script>
+</body>
+</html>
