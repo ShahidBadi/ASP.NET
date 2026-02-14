@@ -106,10 +106,10 @@ namespace MOM.Controllers
         {
             try
             {
-                if(!ModelState.IsValid)
-                {
-                    return View("DepartmentAddEdit");
-                }
+                //if(!ModelState.IsValid)
+                //{
+                //    return View("DepartmentAddEdit",department);
+                //}
            
                 SqlConnection connection = new SqlConnection("Data Source=DESKTOP-3OEISF3\\SQLEXPRESS;Initial Catalog=MOM;Integrated Security=True;TrustServerCertificate=True");
 

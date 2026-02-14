@@ -40,11 +40,11 @@
 
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <form asp-action="MeetingTypeAddEdit"
+        <form asp-action="SaveMeetingType"
               asp-controller="MeetingType"
               method="post">
 
-            @Html.AntiForgeryToken()
+            @* @Html.AntiForgeryToken() *@
 
             <input type="hidden" asp-for="MeetingTypeID" />
 

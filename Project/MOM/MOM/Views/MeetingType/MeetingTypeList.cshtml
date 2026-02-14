@@ -845,22 +845,33 @@
 
 
     <div class="page-header">
-        <h1 class="page-title">Staff</h1>
+        <h1 class="page-title">Meeting Type</h1>
         <div class="breadcrumb">
             <a href="#"><i class="bi bi-house-door"></i> Home</a>
             <span>/</span>
-            <span>Staff</span>
+            <span>Meeting Type</span>
         </div>
     </div>
 
     <div class="card">
         <div class="card-header">
-            <h5 class="card-title">All Staff</h5>
+            <h5 class="card-title"></h5>
             <a class="btn btn-success" asp-controller="MeetingType" asp-action="MeetingTypeAddEdit">
                 <i class="bi bi-plus-circle"></i>
                 Add MeetingType
             </a>
         </div>
+        <hr />
+        @if (TempData["successMessage"] != null)
+        {
+            <p class="text-bg-success"> @TempData["successMessage"]</p>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <p class="text-bg-danger">@TempData["ErrorMessage"]</p>
+        }
+        <hr />
+
         <div class="card-body">
             <div class="table-container">
                 <table>
@@ -881,12 +892,12 @@
                                     <td>@item.Remarks</td>
                                     <td>
                                         <div class="action-buttons">
-                                            <button class="btn btn-primary btn-sm">
+                                            <a asp-action="MeetingTypeAddEdit" asp-controller="MeetingType" asp-route-MeetingTypeId="@item.MeetingTypeID" class="btn btn-primary btn-sm">
                                                 <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button asp-action="MeetingTypeDelete" asp-controller="MeetingType" asp-route-MeetingTypeId="@item.MeetingTypeID" class="btn btn-danger btn-sm">
+                                            </a>
+                                            <a asp-action="MeetingTypeDelete" asp-controller="MeetingType" asp-route-MeetingTypeId="@item.MeetingTypeID" class="btn btn-danger btn-sm">
                                                 <i class="bi bi-trash"></i>
-                                            </button>
+                                            </a>
                                         </div>
                                     </td>
                                 </tr>

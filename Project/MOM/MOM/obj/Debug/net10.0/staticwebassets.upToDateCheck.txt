@@ -1,7 +1,4 @@
-wwwroot\assets\css\AddEdit.css
 wwwroot\assets\css\List.css
-wwwroot\assets\css\Login.css
-wwwroot\assets\css\style.css
 wwwroot\assets\img\apple-touch-icon.png
 wwwroot\assets\img\card.jpg
 wwwroot\assets\img\favicon.png
@@ -498,6 +495,9 @@ wwwroot\assets\vendor\tinymce\themes\silver\theme.min.js
 wwwroot\assets\vendor\tinymce\tinymce.d.ts
 wwwroot\assets\vendor\tinymce\tinymce.js
 wwwroot\assets\vendor\tinymce\tinymce.min.js
+wwwroot\assets\css\style.css
+wwwroot\assets\css\AddEdit.css
+wwwroot\assets\css\Login.css
 D:\6th sem Btech\ASP.NET PROJECT\Project\MOM\MOM\wwwroot\assets\vendor\tinymce\tinymce.min.js
 D:\6th sem Btech\ASP.NET PROJECT\Project\MOM\MOM\wwwroot\assets\vendor\tinymce\tinymce.js
 D:\6th sem Btech\ASP.NET PROJECT\Project\MOM\MOM\wwwroot\assets\vendor\tinymce\themes\silver\theme.min.js
