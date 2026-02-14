@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model List<MOM.Models.DepartmentModel>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -526,7 +528,16 @@
                 Total Departments: <strong>9</strong>
             </div>
         </div>
-
+        <hr />
+        @if (TempData["successMessage"] != null)
+        {
+            <p>@TempData["successMessage"]</p>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <p>@TempData["ErrorMessage"]</p>
+        }
+        <hr />
         <!-- Card with Table -->
         <div class="card">
             <div class="card-header">
@@ -541,180 +552,49 @@
 
                                 <th>#</th>
                                 <th>Department Name</th>
-                                <th>Staff Count</th>
-                                <th>Meetings</th>
+                                @* <th>Staff Count</th> *@
+                                @* <th>Meetings</th> *@
                                 <th>Created Date</th>
                                 <th>Modified Date</th>
                                 <th style="text-align: right;">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            @if(Model.Count() > 0 && Model != null)
+                            {
+                                foreach(var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.DepartmentID</td>
+                                        <td><span class="department-name">@item.DepartmentName</span></td>
+                                        <td>@item.Created</td>
+                                        <td>@item.Modified</td>
+                                        <td>
+                                            <div class="action-icons">
+                                                <a class="icon-btn view" title="View">
+                                                    <i class="bi bi-eye-fill"></i>
+                                                </a>
+                                                <a asp-action="DepartmentAddEdit" asp-controller="Department" asp-route-DepartmentId="@item.DepartmentID" class="icon-btn edit" title="Edit">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a>
+                                                <a  asp-action="DepartmentDelete" asp-controller="Department" asp-route-DepartmentID="@item.DepartmentID" class="icon-btn delete" title="Delete">
+                                                    <i class="bi bi-trash-fill"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
 
-                                <td>7</td>
-                                <td><span class="department-name">Customer Service</span></td>
-                                <td>
-                                    <span class="badge badge-cyan">
-                                        <i class="bi bi-people-fill"></i> 3
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="badge badge-yellow">
-                                        <i class="bi bi-calendar-event-fill"></i> 2
-                                    </span>
-                                </td>
-                                <td>2025-11-20</td>
-                                <td>2025-11-20 22:38</td>
-                                <td>
-                                    <div class="action-icons">
+                                }
+                                                            
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="7">No department Found</td>
+                                </tr>
+                            }
 
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="bi bi-pencil-fill"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete">
-                                            <i class="bi bi-trash-fill"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><span class="department-name">Finance</span></td>
-                                <td>
-                                    <span class="badge badge-cyan">
-                                        <i class="bi bi-people-fill"></i> 3
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="badge badge-yellow">
-                                        <i class="bi bi-calendar-event-fill"></i> 3
-                                    </span>
-                                </td>
-                                <td>2025-11-20</td>
-                                <td>2025-11-20 10:45</td>
-                                <td>
-                                    <div class="action-icons">
-
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="bi bi-pencil-fill"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete">
-                                            <i class="bi bi-trash-fill"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>2</td>
-                                <td><span class="department-name">Human Resources</span></td>
-                                <td>
-                                    <span class="badge badge-cyan">
-                                        <i class="bi bi-people-fill"></i> 2
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="badge badge-yellow">
-                                        <i class="bi bi-calendar-event-fill"></i> 2
-                                    </span>
-                                </td>
-                                <td>2025-11-20</td>
-                                <td>2025-11-20 10:45</td>
-                                <td>
-                                    <div class="action-icons">
-
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="bi bi-pencil-fill"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete">
-                                            <i class="bi bi-trash-fill"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>1</td>
-                                <td><span class="department-name">Information Technology</span></td>
-                                <td>
-                                    <span class="badge badge-cyan">
-                                        <i class="bi bi-people-fill"></i> 4
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="badge badge-yellow">
-                                        <i class="bi bi-calendar-event-fill"></i> 3
-                                    </span>
-                                </td>
-                                <td>2025-11-20</td>
-                                <td>2025-11-20 10:45</td>
-                                <td>
-                                    <div class="action-icons">
-
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="bi bi-pencil-fill"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete">
-                                            <i class="bi bi-trash-fill"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><span class="department-name">Marketing</span></td>
-                                <td>
-                                    <span class="badge badge-cyan">
-                                        <i class="bi bi-people-fill"></i> 3
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="badge badge-yellow">
-                                        <i class="bi bi-calendar-event-fill"></i> 2
-                                    </span>
-                                </td>
-                                <td>2025-11-20</td>
-                                <td>2025-11-20 10:45</td>
-                                <td>
-                                    <div class="action-icons">
-
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="bi bi-pencil-fill"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete">
-                                            <i class="bi bi-trash-fill"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>5</td>
-                                <td><span class="department-name">Operations</span></td>
-                                <td>
-                                    <span class="badge badge-cyan">
-                                        <i class="bi bi-people-fill"></i> 2
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="badge badge-yellow">
-                                        <i class="bi bi-calendar-event-fill"></i> 2
-                                    </span>
-                                </td>
-                                <td>2025-11-20</td>
-                                <td>2025-11-20 10:45</td>
-                                <td>
-                                    <div class="action-icons">
-
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="bi bi-pencil-fill"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete">
-                                            <i class="bi bi-trash-fill"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>

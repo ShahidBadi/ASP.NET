@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿@* <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -124,5 +124,479 @@
             });
         });
     </script>
+</body>
+</html> *@
+
+
+@model MOM.Models.MeetingsModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Schedule New Meeting - MOM</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* Your existing layout styles here */
+        /* ... existing header, sidebar, footer styles ... */
+
+        /* New Meeting Form Styles */
+        .meeting-form-container {
+            padding: 20px;
+            background: #f8f9fa;
+            min-height: calc(100vh - 70px - 60px);
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .page-subtitle {
+            font-size: 16px;
+            color: #64748b;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+            .breadcrumb a {
+                color: #3b82f6;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                transition: color 0.2s;
+            }
+
+                .breadcrumb a:hover {
+                    color: #2563eb;
+                    text-decoration: underline;
+                }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 30px;
+        }
+
+        .card-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e2e8f0;
+            background-color: #f8f9fa;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .form-label i {
+                color: #3b82f6;
+                width: 20px;
+                text-align: center;
+            }
+
+        .required {
+            color: #ef4444;
+            margin-left: 4px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            color: #334155;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #3b82f6;
+                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px 12px;
+            padding-right: 40px;
+        }
+
+        .datetime-input {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+            .datetime-input .form-control {
+                flex: 1;
+            }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+        }
+
+            .btn-outline:hover {
+                background: #f8fafc;
+                border-color: #3b82f6;
+                color: #3b82f6;
+            }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+            .btn-primary:hover {
+                background: #2563eb;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            }
+
+        media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .datetime-input {
+                flex-direction: column;
+            }
+
+            .form-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your Header -->
+    @* <header class="header">
+        <div class="logo-section">
+            <div class="logo-icon">
+                <i class="bi bi-journal-text"></i>
+            </div>
+            <div class="logo-text">MOM</div>
+            <div class="menu-toggle" onclick="toggleSidebar()">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search meetings, members, venues...">
+        </div>
+
+        <div class="header-actions">
+            <div class="profile-btn">
+                <div class="profile-avatar">SB</div>
+                <div class="profile-name">Badi</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Your Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav>
+            <div class="nav-section">
+                <div class="nav-heading">Main</div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-grid"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-heading">MASTER DATA</div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Department" asp-action="DepartmentList">
+                        <i class="bi bi-building"></i>
+                        <span>Department</span>
+                    </a>
+                </div>
+                <!-- ... other sidebar items ... -->
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-heading">MEETINGS</div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Meeting" asp-action="MeetingList">
+                        <i class="bi bi-calendar3"></i>
+                        <span>Meetings</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link active" asp-controller="Meeting" asp-action="Schedule">
+                        <i class="bi bi-calendar-plus"></i>
+                        <span>Schedule Meeting</span>
+                    </a>
+                </div>
+                <!-- ... other meeting items ... -->
+            </div>
+        </nav>
+    </aside> *@
+
+    @* <!-- Main Content Area (where @RenderBody() goes) --> *@
+    <main class="main-content">
+        <div class="meeting-form-container">
+            <div class="page-header">
+                <h1 class="page-title">Schedule New Meeting</h1>
+                <p class="page-subtitle">Create and schedule a new organizational meeting</p>
+                <div class="breadcrumb">
+                    <a href="#">
+                        <i class="bi bi-house-door"></i>
+                        Home
+                    </a>
+                    <span>/</span>
+                    <a href="#">Meetings</a>
+                    <span>/</span>
+                    <span>Schedule New Meeting</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">
+                        <i class="bi bi-calendar-plus"></i>
+                        Schedule New Meeting
+                    </h5>
+                </div>
+
+                <div class="card-body">
+                    <form id="scheduleMeetingForm">
+                        <div class="form-grid">
+                            <!-- Meeting Type -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="bi bi-calendar-event"></i>
+                                    Meeting Type
+                                    <span class="required">*</span>
+                                </label>
+                                <select class="form-control" asp-for="MeetingTypeID">
+                                    <option value="">-- Select Meeting Type --</option>
+                                    <option value="board">Board Meeting</option>
+                                    <option value="department">Department Meeting</option>
+                                    <option value="client">Client Meeting</option>
+                                </select>
+
+                                 <span asp-validation-for="MeetingTypeID" class="text-danger" style="color:red"></span>
+                            </div>
+
+                            <!-- Department -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="bi bi-building"></i>
+                                    Department
+                                    <span class="required">*</span>
+                                </label>
+                                <select asp-for="DepartmentID"  class="form-control">
+                                    <option value="">-- Select Department --</option>
+                                    <option value="hr">Human Resources</option>
+                                    <option value="it">Information Technology</option>
+                                    <option value="finance">Finance</option>
+                                </select>
+
+                                <span asp-validation-for="DepartmentID" class="text-danger" style="color:red"></span>
+                            </div>
+
+                            <!-- Venue -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Venue
+                                    <span class="required">*</span>
+                                </label>
+                                <select class="form-control" asp-for="MeetingVenueID">
+                                    <option value="">-- Select Venue --</option>
+                                    <option value="auditorium">Auditorium</option>
+                                    <option value="boardroom">Board Room</option>
+                                    <option value="conference">Conference Room</option>
+                                </select>
+
+                                <span asp-validation-for="MeetingVenueID" class="text-danger" style="color:red"></span>
+                            </div>
+
+                            <!-- Meeting Date & Time -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="bi bi-clock"></i>
+                                    Meeting Date & Time
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="datetime-input">
+                                    <input type="date" class="form-control" value="2026-01-07" asp-for="MeetingDate">
+                                    <input type="time" class="form-control" value="13:01">
+                                </div>
+                                <span asp-validation-for="MeetingDate" class="text-danger" style="color:red"></span>
+                            </div>
+                        </div>
+
+                        <!-- Meeting Description -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="bi bi-card-text"></i>
+                                Meeting Description
+                                <span class="required">*</span>
+                            </label>
+                            <textarea asp-for="MeetingDescription"  class="form-control" rows="4" placeholder="Enter meeting description and agenda..."></textarea>
+                            <span asp-validation-for="MeetingDescription" class="text-danger" style="color:red"></span>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-outline">
+                                <i class="bi bi-arrow-left"></i>
+                                Back to Meetings
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-calendar-check"></i>
+                                Schedule Meeting
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Your Footer -->
+    <footer class="footer">
+        <div>&copy; 2024 MOM - Meeting Management System. All Rights Reserved</div>
+    </footer>
+
+    @* <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // Form submission
+        document.getElementById('scheduleMeetingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simple validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (isValid) {
+                alert('Meeting scheduled successfully!');
+                this.reset();
+            }
+        });
+
+        // Reset border color on input
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', function() {
+                this.style.borderColor = '';
+            });
+        });
+    </script> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model MOM.Models.DepartmentModel
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -35,6 +36,16 @@
                     Department Information
                 </h5>
             </div>
+        <hr />
+        @if (TempData["successMessage"] != null)
+        {
+            <p>@TempData["successMessage"]</p>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <p>@TempData["ErrorMessage"]</p>
+        }
+        <hr />
             <div class="card-body">
                 <div class="info-box">
                     <i class="bi bi-info-circle"></i>
@@ -44,7 +55,8 @@
                     </div>
                 </div>
 
-                <form>
+                <form asp-action="saveDepartment" asp-controller="Department" method="post">
+                    <input type="hidden" asp-for="DepartmentID" />
                     <!-- Department Name -->
                     <div class="form-group">
                         <label class="form-label">
@@ -54,13 +66,13 @@
                         </label>
                         <div class="input-group">
                             <i class="bi bi-building input-icon"></i>
-                            <input type="text" class="form-control" placeholder="e.g., Human Resources, IT Department, Marketing" required>
+                            <input type="text" asp-for="DepartmentName" class="form-control" placeholder="Enter Department" required>
                         </div>
-                        <small class="form-text">Enter a unique name for the department</small>
+                        <span asp-validation-for="DepartmentName" class="text-danger"></span>
                     </div>
 
                     <!-- Department Code (Optional) -->
-                    <div class="form-group">
+                    @* <div class="form-group">
                         <label class="form-label">
                             <i class="bi bi-hash"></i>
                             Department Code
@@ -70,17 +82,17 @@
                             <input type="text" class="form-control" placeholder="e.g., HR001, IT002" maxlength="10">
                         </div>
                         <small class="form-text">Optional short code for easy reference</small>
-                    </div>
+                    </div> *@
 
                     <!-- Description -->
-                    <div class="form-group">
+                    @* <div class="form-group">
                         <label class="form-label">
                             <i class="bi bi-card-text"></i>
                             Description
                         </label>
                         <textarea class="form-control" rows="4" placeholder="Enter department description, responsibilities, and key functions..." style="resize: vertical; min-height: 100px;"></textarea>
                         <small class="form-text">Provide a brief description of the department's role and responsibilities</small>
-                    </div>
+                    </div> *@
 
                     <!-- Form Actions -->
                     <div class="form-actions">
@@ -124,5 +136,8 @@
             });
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>
