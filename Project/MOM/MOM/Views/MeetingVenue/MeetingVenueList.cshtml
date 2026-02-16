@@ -168,22 +168,10 @@
 </section> *@
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Department List - MOM</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+@model List<MOM.Models.MeetingVenueModel>
 
     <link rel="stylesheet" href="~/assets/css/List.css">
-</head>
-<body>
+
 
 
     <div class="page-header">
@@ -203,91 +191,54 @@
                 Add Venue
             </a>
         </div>
+    <hr />
+    @if (TempData["successMessage"] != null)
+    {
+        <p>@TempData["successMessage"]</p>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <p>@TempData["ErrorMessage"]</p>
+    }
+    <hr />
         <div class="card-body">
             <div class="table-container">
                 <table style="width:900px">
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>Venue Name</th>
                             <th>Created</th>
                             <th>Modified</th>
-                            <th>Total Meetings</th>
-                            <th>Actions</th>
+                            @* <th>Total Meetings</th> *@
+                        <th style="text-align: right;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Unity Pugh</td>
-                            <td>2005/02/11</td>
-                            <td>2005/02/11</td>
-                            <td>2</td>
-                            @* <td>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 37%"></div>
-                                    </div>
-                                    <span style="font-size: 13px;">37%</span>
-                                </div>
-                            </td> *@
-                            <td>
-                                <div class="action-buttons">
-                                    <button class="btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                    <button class="btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Theodore Duran</td>
-                            <td>1999/04/07</td>
-                            <td>1999/04/07</td>
-                            <td>2</td>
-                            @* <td>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 97%"></div>
-                                    </div>
-                                    <span style="font-size: 13px;">97%</span>
-                                </div>
-                            </td> *@
-                            <td>
-                                <div class="action-buttons">
-                                    <button class="btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                    <button class="btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Kylie Bishop</td>
-                            <td>2005/09/08</td>
-                            <td>2005/09/08</td>
-                            <td>2</td>
-                            @* <td>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 63%"></div>
-                                    </div>
-                                    <span style="font-size: 13px;">63%</span>
-                                </div>
-                            </td> *@
-                            <td>
-                                <div class="action-buttons">
-                                    <button class="btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                    <button class="btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                        @if(Model.Count()>0 && Model != null)
+                        {
+                            foreach(var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.MeetingVenueID</td>
+                                    <td>@item.MeetingVenueName</td>
+                                    <td>@item.Created</td>
+                                    <td>@item.Modified</td>
+                                    @* <td>2</td> *@
+                                     <td>
+                                        <div class="action-buttons">
+                                        <a asp-action="MeetingVenueAddEdit" asp-controller="MeetingVenue" asp-route-VenueId="@item.MeetingVenueID" class="btn btn-primary btn-sm">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                        <a asp-action="DeleteVenue" asp-controller="MeetingVenue" asp-route-VenueId="@item.MeetingVenueID"  class="btn btn-danger btn-sm">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                        }
+                    }
+                   
                     </tbody>
                 </table>
             </div>
@@ -299,5 +250,4 @@
             document.getElementById('sidebar').classList.toggle('active');
         }
     </script>
-</body>
-</html>
+
